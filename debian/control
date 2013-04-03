@@ -2,8 +2,8 @@ Source: debathena-nsswitch-config
 Section: debathena-config/net
 Priority: extra
 Maintainer: Debathena Project <debathena@mit.edu>
-Build-Depends: @cdbs@
-Standards-Version: 3.8.4
+Build-Depends: cdbs, debhelper, dh-buildinfo, config-package-dev (>= 5.0~)
+Standards-Version: 3.9.3
 
 Package: debathena-nsswitch-config
 Architecture: any
