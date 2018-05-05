@@ -3,7 +3,10 @@
 DEB_DIVERT_EXTENSION = .debathena
 DEB_TRANSFORM_FILES_debathena-nsswitch-config += \
 	/etc/nsswitch.conf.debathena
-ifneq ($(wildcard /usr/share/base-files/nsswitch.conf),)
+ifneq ($(wildcard /usr/share/libc-bin/nsswitch.conf),)
+    DEB_CHECK_FILES_SOURCE_/etc/nsswitch.conf.debathena = \
+	/usr/share/libc-bin/nsswitch.conf
+else ifneq ($(wildcard /usr/share/base-files/nsswitch.conf),)
     DEB_CHECK_FILES_SOURCE_/etc/nsswitch.conf.debathena = \
 	/usr/share/base-files/nsswitch.conf
 endif

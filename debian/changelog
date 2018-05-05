@@ -1,7 +1,8 @@
-debathena-nsswitch-config (1.16) UNRELEASED; urgency=medium
+debathena-nsswitch-config (1.16) unstable; urgency=medium
 
   * Try to configure all installed nss modules, not just libnss-mdns.
   * Find postinst paths with dpkg-query --control-path.  (Trac: #1050)
+  * Update nsswitch.conf source path for bionic.
 
  -- Anders Kaseorg <andersk@mit.edu>  Sat, 05 May 2018 17:08:24 -0400
 
